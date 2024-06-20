@@ -1,0 +1,9 @@
+{
+  "name": "@smt/beat",
+  "version": "0.0.1",
+  "exports": "./index.ts",
+  "publish": {
+    "include": ["LICENSE", "README.md", "index.ts", "lib/*.ts"],
+    "exclude": ["lib/*.test.ts"]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "@smt/beat",
+  "version": "0.0.1",
+  "description": "Utilities to format a Date as .beat time (a.k.a. Swatch Internet Time)",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "test": "node --import tsx/esm --test lib/*.test.ts"
+  },
+  "author": "Stephen Tudor <smt@smt.io>",
+  "license": "MIT",
+  "dependencies": {
+    "date-fns": "^3.6.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.15.6",
+    "typescript": "^5.4.5"
+  }
+}
