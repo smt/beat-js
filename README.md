@@ -1,6 +1,6 @@
 # beat-js
 
-Utilities to support [.beat time (a.k.a. Swatch Internet Time)](https://en.wikipedia.org/wiki/Swatch_Internet_Time) strings.
+Utilities to support [.beat time (a.k.a. Swatch Internet Time)](https://en.wikipedia.org/wiki/Swatch_Internet_Time).
 
 ## What is a .beat?
 
@@ -12,9 +12,9 @@ The Wikipedia link above explains it the best, but to summarize...
 
 ## tl;dr
 
-This tiny library provides some trivial utilities to format a Date as a .beat string, or find the start and end times for a .beat string.
+This tiny library provides some trivial utilities to format a Date as .beat time, or find the start and end times for a .beat time.
 
-The main use case is to simply output the current time formatted as a .beat, like so:
+The main use case is to simply output the current time formatted as .beat time, like so:
 
 ```ts
 import { beat } from "@smt/beat";
@@ -25,7 +25,7 @@ beat();
 
 ## Installation
 
-**beat** is a [JSR](https://jsr.io/docs/introduction) package. As such, you may use the following methods to install it in your JavaScript or TypeScript project.
+**@smt/beat** is a [JSR](https://jsr.io/docs/introduction) package. As such, you may use the following methods to install it in your JavaScript or TypeScript project.
 
 ### Deno
 
@@ -84,7 +84,7 @@ Please ensure that you check the modified `.npmrc` file into source control afte
 
 ### beat()
 
-Returns a .beat string.
+Returns a .beat time as a string.
 
 The first argument may be a string in ISO-8601 format or a Date object. If no value is provided, or if a valid date cannot be parsed from the provided value, the function will default to using the current time.
 
@@ -106,7 +106,7 @@ beat(new Date("2024-06-21T00:00:00.000Z"));
 
 ### isBeat()
 
-A convenience utility to check if the given value is a .beat string, based on the following regex: `/^@(\d{3})$/`.
+A convenience utility to check if the given value is a .beat time, based on the following regex: `/^@(\d{3})$/`.
 
 ```ts
 import { isBeat } from "@smt/beat";
@@ -129,7 +129,7 @@ isBeat(null);
 
 ### toInterval()
 
-Returns an Interval object containing the start Date and end Date of the given .beat string.
+Returns an Interval object containing the start Date and end Date of the given .beat time.
 
 By default, it assumes the interval should be future-dated relative to the current time, but you can override this by using the `from` (future-date starting from the provided Date) or `until` (past-date based on the provided Date) options.
 

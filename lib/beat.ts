@@ -19,7 +19,14 @@ import { BEAT_INTERVALS } from './precalc.ts';
  * @returns The .beat time.
  * @throws {Error} If the date is invalid.
  * @example
- * beat(new Date());
+ * beat();
+ * // => @041
+ * @example
+ * beat('2024-06-01T00:00:00.000Z');
+ * // => @041
+ * @example
+ * beat(new Date('2024-06-01T00:00:00.000Z'));
+ * // => @041
  */
 export function beat(input?: Date | string | number): string {
   let d: Date | null = null;
@@ -50,16 +57,22 @@ export function beat(input?: Date | string | number): string {
  * @example
  * isBeat('@000');
  * // => true
+ * @example
  * isBeat('@1000');
  * // => false
+ * @example
  * isBeat('100');
  * // => false
+ * @example
  * isBeat('000');
  * // => false
+ * @example
  * isBeat('000@');
  * // => false
+ * @example
  * isBeat('@000@');
  * // => false
+ * @example
  * isBeat('@0000');
  * // => false
  */
@@ -75,8 +88,10 @@ export function isBeat(beat: string): boolean {
  * @example
  * toInterval('@000');
  * // => { start: 2024-01-01T23:00:00.000Z, end: 2024-01-01T23:01:26.400Z }
+ * @example
  * toInterval('@500');
  * // => { start: 2024-01-01T11:00:00.000Z, end: 2024-01-01T11:01:26.400Z }
+ * @example
  * toInterval('@999');
  * // => { start: 2024-01-01T22:58:33.600Z, end: 2024-01-01T23:00:00.000Z }
  */

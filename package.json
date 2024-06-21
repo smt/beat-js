@@ -1,6 +1,6 @@
 {
   "name": "@smt/beat",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Utilities to format a Date as .beat time (a.k.a. Swatch Internet Time)",
   "main": "index.ts",
   "type": "module",
